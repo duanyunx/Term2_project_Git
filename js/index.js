@@ -38,6 +38,12 @@ $(function(){
     });
     })
 
+/* 电子书切换 */
+$('.ebooks .left-box .top .fr li').mouseenter(function(){
+    //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
 /*电子书 table切换 */
 var $lis = $('.ebooks .ebooks-nav > li');
 $lis .mouseover(function(){
@@ -51,7 +57,6 @@ $lis .mouseover(function(){
     //显示索引等于当前Index
     $ebooksList.eq(index).show().siblings('.ebooks-list').hide();
 })
-
 
 /*新书列表交互效果*/
 $('.ebooks .right-box ul > li').mouseenter(function () {
@@ -82,7 +87,13 @@ $(function(){
     });
     })
 
-    /*运动图轮播 */
+/* 服装切换 */
+$('.clothes .left-box .top .fr li').mouseenter(function(){
+    //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
+/*运动图轮播 */
 $(function(){
     $('#sport-banner').tyslide({
         boxh:340,//盒子的高度
@@ -99,7 +110,13 @@ $(function(){
     });
     })
 
-        /*童装图轮播 */
+/* 电子书切换 */
+$('.sport .left-box .top .fr li').mouseenter(function(){
+    //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
+/*童装图轮播 */
 $(function(){
     $('#kid-banner').tyslide({
         boxh:340,//盒子的高度
@@ -115,17 +132,61 @@ $(function(){
     
     });
     })
-        /* 推广商品切换 */
 
-        $('.tg .promotion-title ul li').mouseenter(function(){
-            //导航激活类的切换
-            $(this).addClass('active').siblings().removeClass('active')
-            //内容切换
-            //获取对应索引
-            var index = $(this).index();
-            $('.tg .promotion-content .inner-box').animate({
-                'left' : -index * 1170
-            })
+/* 电子书切换 */
+$('.kid .left-box .top .fr li').mouseenter(function(){
+    //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
+/* 推广商品切换 */
+$('.tg .promotion-title ul li').mouseenter(function(){
+//导航激活类的切换
+    $(this).addClass('active').siblings().removeClass('active')
+    //内容切换
+    //获取对应索引
+    var index = $(this).index();
+    $('.tg .promotion-content .inner-box').animate({
+        'left' : -index * 1170
         })
+})
 
+/* 二维码滑出效果 */
+$('.qr-code .ticket').hover(function(){
+//让二维码滑出来
+    $('.qr-code div').stop(true).animate({
+        left: '-100px'
+    })
+    },function(){
+    //让二维码收回去
+    $('.qr-code div').stop(true).animate({
+        left: 0
+    })
+})
+
+/* 顶部搜索交互 */
+$(document).scroll(function(){
+    //获取到顶部的距离
+    var topDistance=$('html,body').scrollTop();
+    //判断
+    if(topDistance>500){
+        //如果滚动距离大于500，滑下来
+        $('.top-search-box').slideDown(300)
+    }else{
+        //否则 收回去
+        $('.top-search-box').slideUp(300)
+    }
+})
+
+/* 楼梯跳转 */  
+$('.floor li').click(function(){
+    //获取索引
+    var index=$(this).index();
+    //选中每一个板块到顶部的偏移
+    var topOffset=$('.floorBox').eq(index).offset().top;
     
+    //让滚动条滚到这个位置
+    $('html,body').animate({
+        scrollTop: topOffset - 50
+    })
+})
