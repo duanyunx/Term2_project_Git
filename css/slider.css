@@ -46,7 +46,7 @@
 				background-image:url(../img/7.png);
 				background-position: -20px;
 				cursor: pointer;
-				z-index: 77;
+				z-index: 100;
 			}
 			
 			.btnright{
@@ -59,7 +59,7 @@
 				background-image:url(../img/l.jpg);
 				background-position: -30px;
 				cursor: pointer;
-				z-index: 77;
+				z-index: 100;
 				
 			}
 			

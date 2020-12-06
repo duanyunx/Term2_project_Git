@@ -4,7 +4,7 @@
 $(function(){
     //把函数挂在window上暴露出去
      window.gotoTop =function(options){
-        var $gotoTopHtml= $(`<div class="backToTop"><img src="${options.imgUrl}"></div>`);
+        var $gotoTopHtml= $('<div class="backToTop"><img src="${options.imgUrl}"></div>');
 
         //写样式定位
         $gotoTopHtml.css({

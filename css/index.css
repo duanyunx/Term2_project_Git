@@ -782,7 +782,6 @@ text-indent: 0;
 .kid{
     margin-top: 1050px;
     height: 500px;
-    background-color: #ccc;
 }
 /*左侧盒子*/
 .kid .left-box{
@@ -938,7 +937,7 @@ text-indent: 0;
 }
 /*  =========== 9.家居日用  =========== */
 .daily{
-    margin-top: 1550px;
+    margin-top: 200px;
     height: 500px;
 }
 /*左侧盒子*/
@@ -1011,7 +1010,7 @@ text-indent: 0;
   /*  =========== 10.推广商品  =========== */
 .tg{
     height: 686px;
-    margin-top: 270px;
+    margin-top: 220px;
 }
 /* 标题*/
 .tg .promotion-title {
