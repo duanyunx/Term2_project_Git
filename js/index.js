@@ -82,7 +82,7 @@ $(function(){
     });
     })
 
-    /*运动图轮播 */
+/*运动图轮播 */
 $(function(){
     $('#sport-banner').tyslide({
         boxh:340,//盒子的高度
@@ -99,7 +99,7 @@ $(function(){
     });
     })
 
-        /*童装图轮播 */
+/*童装图轮播 */
 $(function(){
     $('#kid-banner').tyslide({
         boxh:340,//盒子的高度
@@ -114,18 +114,98 @@ $(function(){
         controlsCurrentColor:"white",//当前控制按钮的颜色
     
     });
+
+ /* 推广商品切换 */
+ $('.promotion .promotion-title ul li').mouseenter(function(){
+    //导航激活类的切换
+    $(this).addClass('active').siblings().removeClass('active')
+    //内容切换
+    //获取对应索引
+    var index = $(this).index();
+    $('.promotion .promotion-content .inner-box').animate({
+        'left' : -index * 1170
     })
-        /* 推广商品切换 */
+})
 
-        $('.tg .promotion-title ul li').mouseenter(function(){
-            //导航激活类的切换
-            $(this).addClass('active').siblings().removeClass('active')
-            //内容切换
-            //获取对应索引
-            var index = $(this).index();
-            $('.tg .promotion-content .inner-box').animate({
-                'left' : -index * 1170
-            })
-        })
+/* 电子书切换 */
+$('.ebooks .left-box .top .fr li').mouseenter(function(){
+    //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+    })
 
-    
+/* 服装切换 */
+$('.clothes .left-box .top .fr li').mouseenter(function(){
+    //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
+/* 运动切换 */
+$('.sport .left-box .top .fr li').mouseenter(function(){
+    //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+
+/* 童装切换 */
+$('.kid .left-box .top .fr li').mouseenter(function(){
+    //导航激活类的切换
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+/*返回顶部*/
+ //绑定滚动时间
+$(document).scroll(function(){
+   //获取距离顶部的距离
+   var topDistance=$('html,body').scrollTop();
+   //判断
+   if(topDistance>500){
+      $('.backToTop').fadeIn();
+   }else{
+    $('.backToTop').fadeOut();
+   }
+}) 
+
+//返回顶部功能
+$('.backToTop').click(function(){
+   $('html,body').animate({
+       scrollTop:0
+   },300)
+})
+
+/*二维码滑出效果*/
+$('.qr-code .ticket').hover(function(){
+    //让二维码滑出
+    $('.qr-code div').stop(true).animate({
+        left:'-100px'
+    })
+},function(){
+    //让二维码收回
+    $('.qr-code div').stop(true).animate({
+        left:0
+    })
+}) 
+
+/* 顶部搜索框交互*/
+$(document).scroll(function(){
+    //获取到顶部的距离
+    var topDistance=$('html,body').scrollTop();
+    //判断
+    if(topDistance>500){
+        //如果滚动距离大于500，滚下来
+        $('.top-search-box').slideDown(300)
+    }else{
+        // 否则，收回去
+        $('.top-search-box').slideUp(300)
+    }
+})
+
+/*楼梯跳转*/
+$('.floor li').click(function(){
+    //获取索引
+    var index=$(this).index();
+    //选中每一个板块到顶部的偏移
+    var topOffset=$('.floorBox').eq(index).offset().top;
+    //让滚动条滚到这个位置
+    $('html,body').animate({
+        scrollTop:topOffset-80
+    })
+})
+})

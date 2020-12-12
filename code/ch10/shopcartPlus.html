@@ -20,6 +20,7 @@
 <p class="fr"><span><font size="2">欢迎光临&nbsp;<a href="#" class="title">乐购</a></span>，<span>请 <a href="#" class="login">登录</a> / <a href="#" class="zhuce">注册</a></font></span></p>
 </div>
 </div>
+
 <!--  2.导航  -->
 <div class="nav container">
 <!--  搜索框&&购物车&&订单-->
@@ -58,11 +59,14 @@
 </ul>
 </div>
 </div>
+
+<!--  购物车  -->
 <div class="shopcart container">
     <!--全部商品-->
-    <h3>全部商品(<i class="goodscount">2</i> )</h3>
+    <h3>全部商品(<i class="goodscount">0</i> )</h3>
     <!--表格-->
     <table>
+        <!--表头-->
         <thead>
             <tr>
                 <th><input type="checkbox">全选</th>
@@ -73,6 +77,7 @@
                 <th>操作</th>
             </tr>
         </thead>
+        <!--内容-->
         <tbody>
             <tr>
                 <td><input type="checkbox"></td>
@@ -104,11 +109,12 @@
             </tr>
         </tbody>
     </table>
+    <!--计算总价-->
     <div class="totalprice">
         <input type="checkbox"><span>全选 </span>  
         <span class="deletechecked">删除选择商品</span>  
-        <span>已选择<i class="count">1</i>  件商品</span>  
-        <span class="total_account">总价：<i class="total">41.00</i></span>  
+        <span>已选择<i class="count">0</i>  件商品</span>  
+        <span class="total_account">总价：<i class="total">00.00</i></span>  
         <button class="account">去结算</button>
     </div>
 </div>
@@ -190,6 +196,6 @@
 
 <!--  引入Jquery.min.js -->
 <script src="../../js/jquery-1.11.0.js"></script>
-<script src="../../js/shopcart.js"></script>
+<script src="../../js/shopcartPlus.js"></script>
 </body>
 </html>
