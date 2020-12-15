@@ -3,6 +3,7 @@
     height: 546px;
     margin: 50px auto;
 }
+
 /* 标题 */
 .ez .ez-title{
     height: 40px;
@@ -12,11 +13,9 @@
     color: #ff6700;
     text-indent: 20px;
 }
-
 .ez .ez-title h1{
     font-weight: 200;
 }
-
 .ez .ez-title ul li{
     float: left;
     width: 100px;
@@ -24,7 +23,6 @@
     font-size: 14px;
     color: #333;
 }
-
 .ez .ez-title ul li.active{
     background-color: #ff6700;
     color: #fff;
@@ -35,12 +33,10 @@
     height: 500px;
     width: 1350px;
 }
-
 .ez-list{
     width: 1350px;
     height: 410px;
 }
-
 .ez-list p{
     width: 225px;
     height: 205px;
@@ -49,8 +45,64 @@
 
     box-sizing: border-box;
 }
-
 .ez-list p > img{
     width: 80% !important;
     height: 80% !important;
+}
+
+
+/*      猜你喜欢     */
+.guess-you-like{
+    width: 1200px;
+    height: 456px;
+}
+
+/*标题*/
+.guess-you-like-title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #ff6700;
+    border-bottom: 6px solid #ff6700;
+    background-color: #fff;
+    text-indent: 20px;
+}
+.guess-you-like-title h1{
+    font-weight: 300;
+}
+
+/*内容*/
+.guess-you-like-content{
+    width: 1200px;
+    height: 500px;
+    background-color: green;
+}
+/*上下滑动
+.out-box{
+    overflow: hidden;
+}
+.inner-box{
+    height: 1500px;
+    position: relative;
+    top: 0;
+}*/
+
+/*左右滑动的版本*/
+.out-box{
+    overflow: hidden;
+}
+.inner-box{
+    width: 4800px;
+    position: relative;
+    left: 0;
+}
+.guess-you-like-content li{
+    list-style: none;
+    width: 1200px;
+    height: 500px;
+    float: left;
+}
+.guess-you-like-content li img{
+    width: 100%;
+    height: 100%;
 }
