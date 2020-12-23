@@ -33,7 +33,7 @@ $(function(){
     /* 换一批 */
     //定义一个索引
     //上下滑动的版本
-    /*var index = 0;
+    var index = 0;
     $('.change').click(function(){
         //自增
         index++;
@@ -44,10 +44,10 @@ $(function(){
         $('.inner-box').animate({
             top: -index * 500
         })
-    })*/
+    })
 
     //左右滑动的版本
-    var index = 0;
+    /*var index = 0;
     $('.change').click(function(){
         //自增
         index++;
@@ -62,4 +62,5 @@ $(function(){
             }
         })
     })
+    */
 })
